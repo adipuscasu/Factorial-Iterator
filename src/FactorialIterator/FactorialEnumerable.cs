@@ -10,4 +10,9 @@ public class FactorialEnumerable(BigInteger n) : IEnumerable<BigInteger>
     {
         return new FactorialEnumerator(_n);
     }
+
+    IEnumerator IEnumerable.GetEnumerator()
+    {
+        return new FactorialEnumerator(_n);
+    }
 }
